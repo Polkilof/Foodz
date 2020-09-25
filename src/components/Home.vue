@@ -198,7 +198,10 @@
 								<div class="c-product-grid__item-wrap c-product-grid__item-wrap--layout-product-3">
 									<div class="c-product-grid__thumb-wrap c-product-grid__thumb-wrap--layout-product-3">
 										<a href="#">
-											<div class="c-badge__list c-product-grid__badges c-product-grid__badges--layout-product-3"></div>
+											<div class="c-badge__list c-product-grid__badges c-product-grid__badges--layout-product-3">
+												<span class="c-badge c-badge--featured">Featured</span>
+												<span class="c-badge c-badge--new">New</span>
+											</div>
 
 											<img
 												src="../assets/demo1-0901996381-1-238x238.jpg"
@@ -231,7 +234,7 @@
 												<span class="c-markers__title">Spicy</span>
 												<img class="c-markers__icon" src="../assets/demo1-1927616421-1.svg" alt="Spicy" />
 											</span>
-											<span class="c-markers__wrap c-product-grid__marker">
+											<span class="c-markers__wrap c-product-grid__marker c-product-grid__marker_has">
 												<button class="h-cb h-cb--svg c-product-grid__marker-info-icon js-extra-info" type="button">
 													<svg><use xlink:href="#svg-info"></use></svg>
 												</button>
@@ -249,7 +252,7 @@
 											</span>
 										</div>
 										<div class="c-product-grid__short-desc">
-											<p>Garlic Flatbread with Mozzarella · Parmesan · Garlic · Rosemary</p>
+											<p>Garlic Flatbread with Mozzarella, Parmesan, Garlic, Rosemary</p>
 										</div>
 
 										<form class="c-variation__form variations_form cart" action="#">
@@ -333,7 +336,10 @@
 								<div class="c-product-grid__item-wrap c-product-grid__item-wrap--layout-product-3">
 									<div class="c-product-grid__thumb-wrap c-product-grid__thumb-wrap--layout-product-3">
 										<a href="#">
-											<div class="c-badge__list c-product-grid__badges c-product-grid__badges--layout-product-3"></div>
+											<div class="c-badge__list c-product-grid__badges c-product-grid__badges--layout-product-3">
+												<span class="c-badge c-badge--featured">Featured</span>
+												<span class="c-badge c-badge--new">New</span>
+											</div>
 
 											<img
 												src="../assets/demo1-0901188784-1-238x238.jpg" 
@@ -379,7 +385,7 @@
 											</span>
 										</div>
 										<div class="c-product-grid__short-desc">
-											<p>Tomato Sauce · Mozzarella · Chicken · Beef · Pepperoni · Onions · Rosemary</p>
+											<p>Tomato Sauce, Mozzarella, Chicken, Beef, Pepperoni, Onions, Rosemary</p>
 										</div>
 
 										<form class="c-variation__form variations_form cart" action="#">
@@ -499,6 +505,23 @@
 
 <script>
 export default {
+	data() {
+		return {
+			products: [
+				/*{
+					'id': '1',
+					'title': 'Ноутбук Lenovo G500A (59391955)',
+					'vendor': 'Lenovo G500A',
+					'color': 'black',
+					'material': 'Пластик',
+					'description': 'Экран 15.6" (1366x768) HD LED, глянцевый / Intel Core i3-3110M (2.4 ГГц) / RAM 4 ГБ / HDD 1 ТБ / AMD Radeon HD 8570M, 2 ГБ / DVD+/-RW / LAN / Wi-Fi / Bluetooth / веб-камера / DOS / 2.6 кг / черный',
+					'price': 500,
+					'promo': false,
+					'imageSrc': 'https://www.nix.ru/images/Lenovo-G500-1676662302.jpg?good_id=167666&width=500&height=500&view_id=2302',
+				},*/
+			]
+		}
+	},
 	computed: {
 		
 	}
@@ -533,7 +556,7 @@ export default {
 	.c-product-grid__markers{
 		position: relative;
 	}
-	.c-markers__wrap{
+	.c-product-grid__marker_has{
 		position: static;
 	}
 	.c-product-grid__marker-popup {
