@@ -194,6 +194,8 @@
 					<div class="woocommerce columns-4">
 						<ul class="c-product-grid__list c-product-grid__list--layout-product-3 c-product-grid__list--carousel columns-4 h-clearfix">
 
+							<!-- {{ products.pizza[0] }} -->
+
 							<li class="c-product-grid__item c-product-grid__item--layout-product-3 product type-product post-138 status-publish first instock product_cat-pizza has-post-thumbnail shipping-taxable purchasable product-type-variable has-default-attributes">
 								<div class="c-product-grid__item-wrap c-product-grid__item-wrap--layout-product-3">
 									<div class="c-product-grid__thumb-wrap c-product-grid__thumb-wrap--layout-product-3">
@@ -474,6 +476,8 @@
 								</div>
 							</li>
 
+							<app-product-item></app-product-item>
+
 						</ul>
 					</div>
 				</div>
@@ -507,23 +511,109 @@
 export default {
 	data() {
 		return {
-			products: [
-				/*{
-					'id': '1',
-					'title': 'Ноутбук Lenovo G500A (59391955)',
-					'vendor': 'Lenovo G500A',
-					'color': 'black',
-					'material': 'Пластик',
-					'description': 'Экран 15.6" (1366x768) HD LED, глянцевый / Intel Core i3-3110M (2.4 ГГц) / RAM 4 ГБ / HDD 1 ТБ / AMD Radeon HD 8570M, 2 ГБ / DVD+/-RW / LAN / Wi-Fi / Bluetooth / веб-камера / DOS / 2.6 кг / черный',
-					'price': 500,
-					'promo': false,
-					'imageSrc': 'https://www.nix.ru/images/Lenovo-G500-1676662302.jpg?good_id=167666&width=500&height=500&view_id=2302',
-				},*/
-			]
+			'products': {
+				'pizza': [
+					{
+						'id': '1',
+						'badge': ['Featured', 'New'],
+						'sale': '17',
+						'imageSrc': 'https://firebasestorage.googleapis.com/v0/b/foodz-220e0.appspot.com/o/products%2Fdemo1-0901996381-1-238x238.jpg?alt=media&token=15f3019a-2105-493f-899c-940c51f98902',
+						'name': 'Pizza Bianca',
+						'markers': ['Vegetarian', 'Spicy'],
+						'facts': 'Serving Size 1 slice (63 g)<br>Per Serving:<br>Calories 168<br>Total Fat - 4.7g<br>Carbohydrates - 20.4g<br>Protein - 7.6g',
+						'wishlist': false,
+						'stock': true,
+						'description': 'Garlic Flatbread with Mozzarella, Parmesan, Garlic, Rosemary',
+						'crust': ['thick', 'thin'],
+						'size': ['25cm', '30cm', '35cm'],
+						'price': [13.99, 15.99],
+					},
+					{
+						'id': '2',
+						'badge': '',
+						'sale': '',
+						'imageSrc': 'https://firebasestorage.googleapis.com/v0/b/foodz-220e0.appspot.com/o/products%2Fdemo1-0901188784-1-238x238.jpg?alt=media&token=1d5f1b5f-a5d9-41f7-b6ef-7aece97a5241',
+						'name': 'Pizza Carne',
+						'markers': ['Vegetarian', 'Spicy'],
+						'facts': 'Serving Size 1 slice (63 g)<br>Per Serving:<br>Calories 168<br>Total Fat - 4.7g<br>Carbohydrates - 20.4g<br>Protein - 7.6g',
+						'wishlist': false,
+						'stock': true,
+						'description': 'Tomato Sauce, Mozzarella, Chicken, Beef, Pepperoni, Onions, Rosemary',
+						'crust': ['thick', 'thin'],
+						'size': ['25cm', '30cm', '35cm'],
+						'price': [13.99, 15.99],
+					}
+				],
+				'burgers': [
+					{
+						'id': '3',
+						'badge': '',
+						'sale': '',
+						'imageSrc': 'https://firebasestorage.googleapis.com/v0/b/foodz-220e0.appspot.com/o/products%2Fdemo1-0927393382-1-238x238.jpg?alt=media&token=f136918c-4e61-4540-a6f7-59f69b837e43',
+						'name': 'Angus burger',
+						'wishlist': false,
+						'stock': true,
+						'description': 'A hamburger made using beef from Angus cattle.',
+						'price': 8.99,
+					}
+				],
+				'sushi': [
+					{
+						'id': '4',
+						'badge': '',
+						'sale': '',
+						'imageSrc': 'https://firebasestorage.googleapis.com/v0/b/foodz-220e0.appspot.com/o/products%2Fdemo1-1008274691-1-238x238.jpg?alt=media&token=9cc0beef-1a20-41fc-8757-c70368429d18',
+						'name': 'Tekkamaki',
+						'wishlist': false,
+						'stock': true,
+						'description': 'One or more of the parts is deep-fried in a light batter.',
+						'price': 3.99,
+					}
+				],
+				'steaks': [
+					{
+						'id': '5',
+						'badge': '',
+						'sale': '',
+						'imageSrc': 'https://firebasestorage.googleapis.com/v0/b/foodz-220e0.appspot.com/o/products%2Fdemo1-1048717514-1-238x238.jpg?alt=media&token=97defe73-ba2a-4aa5-a7a2-934ff04b4802',
+						'name': 'American Wagyu Eye of Rib',
+						'wishlist': false,
+						'stock': true,
+						'description': 'American Wagyu Eye of Rib, Snake River Farm, ID.',
+						'price': 45.99,
+					}
+				],
+				'desserts': [
+					{
+						'id': '6',
+						'badge': '',
+						'sale': '',
+						'imageSrc': 'https://firebasestorage.googleapis.com/v0/b/foodz-220e0.appspot.com/o/products%2Fdemo1-1215178083-1-238x238.jpg?alt=media&token=110c89d7-9c3b-40cd-a3b5-e983f11889c6',
+						'name': 'Amandine',
+						'wishlist': false,
+						'stock': true,
+						'description': 'Flour, full-fat milk, egg yolks, whipping cream.',
+						'price': 1.99,
+					}
+				],
+				'drinks': [
+					{
+						'id': '7',
+						'badge': '',
+						'sale': '',
+						'imageSrc': 'https://firebasestorage.googleapis.com/v0/b/foodz-220e0.appspot.com/o/products%2Fdemo1-1050681807-1-238x238.jpg?alt=media&token=65b3be9e-19e1-4835-8e48-65b81e4f2006',
+						'name': 'Blackberry smoothie',
+						'wishlist': false,
+						'stock': true,
+						'description': 'Blackberry, almond milk, chia seeds.',
+						'price': 2.99,
+					}
+				]
+			}
 		}
 	},
 	computed: {
-		
+
 	}
 }
 </script>
@@ -549,23 +639,6 @@ export default {
 		background-color: #f4f5f7;
 		color: #4c4e56;
 		background-image: url("../assets/demo1-0646238461-1.jpg");
-	}
-	.c-product-grid__marker-popup {
-		min-width: 248px;
-	}
-	.c-product-grid__markers{
-		position: relative;
-	}
-	.c-product-grid__marker_has{
-		position: static;
-	}
-	.c-product-grid__marker-popup {
-		left: -18px;
-		right: auto;
-	}
-	.c-markers__wrap:hover .c-product-grid__marker-popup {
-		opacity: 1;
-		visibility: visible;
 	}
 	.home-slider{
 		height: 683px;
