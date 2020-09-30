@@ -21,13 +21,13 @@ const routes = [
 		component: Home
 	},
 	{
-		path: '/product',
+		path: '/product/:id',
 		props: true,
 		name: 'product',
 		component: Product
 	},
 	{
-		path: '/product-category',
+		path: '/product-category/:category',
 		name: 'product-category',
 		component: ProductCategory,
 		//beforeEnter: AuthGuard

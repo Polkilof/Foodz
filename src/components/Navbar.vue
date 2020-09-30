@@ -1068,53 +1068,53 @@
 						<nav itemscope="" itemtype="http://schema.org/SiteNavigationElement" class="c-mega-menu js-mega-menu">
 							<ul id="mega-menu" class="c-mega-menu__list">
 								<li class="c-mega-menu__item c-mega-menu__item--has-children menu-item-495">
-									<router-link to="/product-category" tag="a">
+									<router-link :to="'/product-category/' + category[0]" tag="a">
 										<span class="c-mega-menu__title-wrap c-mega-menu__title-wrap--vert c-mega-menu__title-wrap--header-type-1">
 											<svg class="c-mega-menu__icon"><use xlink:href="#svg-icon-2"></use></svg><span class="c-mega-menu__title c-mega-menu__title--vert">Pizza</span>
 										</span>
 									</router-link>
 								</li>
 								<li class="c-mega-menu__item menu-item-490">
-									<a href="#">
+									<router-link :to="'/product-category/' + category[1]" tag="a">
 										<span class="c-mega-menu__title-wrap c-mega-menu__title-wrap--vert c-mega-menu__title-wrap--header-type-1">
 											<svg class="c-mega-menu__icon"><use xlink:href="#svg-icon-9"></use></svg><span class="c-mega-menu__title c-mega-menu__title--vert">Burgers</span>
 										</span>
-									</a>
+									</router-link>
 								</li>
 								<li class="c-mega-menu__item menu-item-494">
-									<a href="#">
+									<router-link :to="'/product-category/' + category[2]" tag="a">
 										<span class="c-mega-menu__title-wrap c-mega-menu__title-wrap--vert c-mega-menu__title-wrap--header-type-1">
 											<svg class="c-mega-menu__icon"><use xlink:href="#svg-icon-12"></use></svg><span class="c-mega-menu__title c-mega-menu__title--vert">Sushi</span>
 										</span>
-									</a>
+									</router-link>
 								</li>
 								<li class="c-mega-menu__item menu-item-492">
-									<a href="#">
+									<router-link :to="'/product-category/' + category[3]" tag="a">
 										<span class="c-mega-menu__title-wrap c-mega-menu__title-wrap--vert c-mega-menu__title-wrap--header-type-1">
 											<svg class="c-mega-menu__icon"><use xlink:href="#svg-icon-10"></use></svg><span class="c-mega-menu__title c-mega-menu__title--vert">Noodles</span>
 										</span>
-									</a>
+									</router-link>
 								</li>
 								<li class="c-mega-menu__item menu-item-493">
-									<a href="#">
+									<router-link :to="'/product-category/' + category[4]" tag="a">
 										<span class="c-mega-menu__title-wrap c-mega-menu__title-wrap--vert c-mega-menu__title-wrap--header-type-1">
 											<svg class="c-mega-menu__icon"><use xlink:href="#svg-icon-14"></use></svg><span class="c-mega-menu__title c-mega-menu__title--vert">Steaks</span>
 										</span>
-									</a>
+									</router-link>
 								</li>
 								<li class="c-mega-menu__item menu-item-491">
-									<a href="#">
+									<router-link :to="'/product-category/' + category[5]" tag="a">
 										<span class="c-mega-menu__title-wrap c-mega-menu__title-wrap--vert c-mega-menu__title-wrap--header-type-1">
 											<svg class="c-mega-menu__icon"><use xlink:href="#svg-icon-32"></use></svg><span class="c-mega-menu__title c-mega-menu__title--vert">Desserts</span>
 										</span>
-									</a>
+									</router-link>
 								</li>
 								<li class="c-mega-menu__item menu-item-563">
-									<a href="#">
+									<router-link :to="'/product-category/' + category[6]" tag="a">
 										<span class="c-mega-menu__title-wrap c-mega-menu__title-wrap--vert c-mega-menu__title-wrap--header-type-1">
 											<svg class="c-mega-menu__icon"><use xlink:href="#svg-icon-17"></use></svg><span class="c-mega-menu__title c-mega-menu__title--vert">Drinks</span>
 										</span>
-									</a>
+									</router-link>
 								</li>
 							</ul>
 						</nav>
@@ -1208,7 +1208,14 @@
 <script>
 	export default {
 		data() {
-			return {}
+			return {
+				category: ['pizza', 'burgers', 'sushi', 'noodles', 'steaks', 'desserts', 'drinks']
+			}
+		},
+		computed: {
+			/*category() {
+				return this.$store.getters.categories
+			},*/
 		}
 	}
 </script>

@@ -2,18 +2,18 @@
 	<li class="c-product-grid__item c-product-grid__item--layout-product-3 product type-product post-145 status-publish instock product_cat-pizza has-post-thumbnail shipping-taxable purchasable product-type-variable has-default-attributes">
 		<div class="c-product-grid__item-wrap c-product-grid__item-wrap--layout-product-3">
 			<div class="c-product-grid__thumb-wrap c-product-grid__thumb-wrap--layout-product-3">
-				<a href="#">
+				<router-link :to="'/product/' + product.id" tag="a">
 					<div class="c-badge__list c-product-grid__badges c-product-grid__badges--layout-product-3">
 						<span class="c-badge c-badge--featured">Featured</span>
 						<span class="c-badge c-badge--new">New</span>
 					</div>
 
 					<img
-						src="https://firebasestorage.googleapis.com/v0/b/foodz-220e0.appspot.com/o/products%2Fdemo1-0901996381-1-238x238.jpg?alt=media&token=15f3019a-2105-493f-899c-940c51f98902"
-						alt="Pizza Bianca"
+						:src="product.imageSrc"
+						:alt="product.name"
 						class="c-product-grid__thumb c-product-grid__thumb--layout-product-3 front"
 					/>
-				</a>
+				</router-link>
 				<div class="c-product-grid__thumb-button-list c-product-grid__thumb-button-list--layout-product-3">
 					<button class="h-cb c-product-grid__thumb-button js-grid-zoom" type="button" data-product-id="138">
 						<svg class="c-product-grid__thumb-zoom"><use xlink:href="#svg-search"></use></svg>
@@ -27,7 +27,7 @@
 			<div class="c-product-grid__details c-product-grid__details--layout-product-3">
 				<div class="c-badge__list c-product-grid__badges-alt"></div>
 				<div class="c-product-grid__title">
-					<a class="c-product-grid__title-link" href="#">Pizza Bianca</a>
+					<router-link :to="'/product/' + product.id" tag="a" class="c-product-grid__title-link">{{ product.name }}</router-link>
 				</div>
 
 				<div class="c-markers c-product-grid__markers">
@@ -46,18 +46,13 @@
 						<div class="c-product-grid__marker-popup c-product-grid__marker-popup--layout-product-3 js-extra-info-popup">
 							<div class="c-product-grid__marker-popup-title">Nutritional facts</div>
 							<div class="c-product-grid__marker-popup-text">
-								Serving Size 1 slice (63 g)<br />
-								Per Serving:<br />
-								Calories 168<br />
-								Total Fat - 4.7g<br />
-								Carbohydrates - 20.4g<br />
-								Protein - 7.6g
+								{{ product.facts }}
 							</div>
 						</div>
 					</span>
 				</div>
 				<div class="c-product-grid__short-desc">
-					<p>Garlic Flatbread with Mozzarella, Parmesan, Garlic, Rosemary</p>
+					<p>{{ product.description }}</p>
 				</div>
 
 				<form class="c-variation__form variations_form cart" action="#">
@@ -146,6 +141,9 @@ export default {
 			
 		}
 	},
+	computed: {
+
+	}
 }
 </script>
 

@@ -241,6 +241,17 @@
 <script>
 export default {
 	props: ['id'],
+	data() {
+		return {
+
+		}
+	},
+	computed: {
+		product() {
+			const id = this.id
+			return this.$store.getters.productById(id)
+		},
+	}
 }
 </script>
 
