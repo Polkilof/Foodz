@@ -4,7 +4,9 @@ import Routes from './router'
 import store from './store/index'
 import * as fb from 'firebase/app'
 import babelPolyfill from 'babel-polyfill'
+import ProductItemComponent from './components/Common/ProductItem.vue'
 
+Vue.component('app-product-item', ProductItemComponent)
 Vue.config.productionTip = false
 
 new Vue({
