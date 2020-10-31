@@ -1067,14 +1067,17 @@
 					<div class="l-section__container c-header__container c-header__container--center">
 						<nav itemscope="" itemtype="http://schema.org/SiteNavigationElement" class="c-mega-menu js-mega-menu">
 							<ul id="mega-menu" class="c-mega-menu__list">
-								<li class="c-mega-menu__item c-mega-menu__item--has-children menu-item-495">
-									<router-link :to="'/product-category/' + category[0]" tag="a">
+								<li
+									v-for="(item,i) in category" :key="i"
+									class="c-mega-menu__item c-mega-menu__item--has-children menu-item-495">
+									<router-link :to="'/product-category/' + item.name" tag="a">
 										<span class="c-mega-menu__title-wrap c-mega-menu__title-wrap--vert c-mega-menu__title-wrap--header-type-1">
-											<svg class="c-mega-menu__icon"><use xlink:href="#svg-icon-2"></use></svg><span class="c-mega-menu__title c-mega-menu__title--vert">Pizza</span>
+											<svg class="c-mega-menu__icon"><use xlink:href="#svg-icon-2"></use></svg>
+											<span class="c-mega-menu__title c-mega-menu__title--vert">{{item.name}}</span>
 										</span>
 									</router-link>
 								</li>
-								<li class="c-mega-menu__item menu-item-490">
+								<!-- <li class="c-mega-menu__item menu-item-490">
 									<router-link :to="'/product-category/' + category[1]" tag="a">
 										<span class="c-mega-menu__title-wrap c-mega-menu__title-wrap--vert c-mega-menu__title-wrap--header-type-1">
 											<svg class="c-mega-menu__icon"><use xlink:href="#svg-icon-9"></use></svg><span class="c-mega-menu__title c-mega-menu__title--vert">Burgers</span>
@@ -1115,7 +1118,7 @@
 											<svg class="c-mega-menu__icon"><use xlink:href="#svg-icon-17"></use></svg><span class="c-mega-menu__title c-mega-menu__title--vert">Drinks</span>
 										</span>
 									</router-link>
-								</li>
+								</li> -->
 							</ul>
 						</nav>
 					</div>
@@ -1209,13 +1212,13 @@
 	export default {
 		data() {
 			return {
-				category: ['pizza', 'burgers', 'sushi', 'noodles', 'steaks', 'desserts', 'drinks']
+
 			}
 		},
 		computed: {
-			/*category() {
+			category() {
 				return this.$store.getters.categories
-			},*/
+			},
 		}
 	}
 </script>

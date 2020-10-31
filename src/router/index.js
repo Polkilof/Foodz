@@ -27,7 +27,7 @@ const routes = [
 		component: Product
 	},
 	{
-		path: '/product-category/:category',
+		path: '/product-category/:categories',
 		name: 'product-category',
 		component: ProductCategory,
 		//beforeEnter: AuthGuard

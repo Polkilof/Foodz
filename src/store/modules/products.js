@@ -17,8 +17,9 @@ import * as fb from 'firebase'
 
 export default {
 	state: {
-		'category': ['pizza', 'burgers', 'sushi', 'noodles', 'steaks', 'desserts', 'drinks'],
+		'categories': ['pizza', 'burgers', 'sushi', 'noodles', 'steaks', 'desserts', 'drinks'],
 		'products': {
+			'categories': [{'name':'pizza'}, {'name':'burgers'}, {'name':'sushi'}, {'name':'noodles'}, {'name':'steaks'}, {'name':'desserts'}, {'name':'drinks'}],
 			'pizza': [
 				{
 					'id': '1',
@@ -72,7 +73,7 @@ export default {
 					'id': '4',
 					'badge': '',
 					'sale': '',
-					'imageSrc': 'https://firebasestorage.googleapis.com/v0/b/foodz-220e0.appspot.com/o/products%2Fdemo1-1008274691-1-238x238.jpg?alt=media&token=9cc0beef-1a20-41fc-8757-c70368429d18',
+					'imageSrc': 'https://firebasestorage.googleapis.com/v0/b/foodz-220e0.appspot.com/o/products%2Fdemo1-1021605166-1-238x238.jpg?alt=media&token=95986c69-138a-4ea5-bdee-fe677d852b1c',
 					'name': 'Tekkamaki',
 					'wishlist': false,
 					'stock': true,
@@ -144,7 +145,7 @@ export default {
 			return state.products
 		},
 		categories (state) {
-			return state.products.category
+			return state.products.categories
 		},
 		/*promoProducts (state) {
 			return state.products.filter(product => {
@@ -156,16 +157,19 @@ export default {
 				return product.ownerId === getters.user.id
 			})
 		},*/
-		productById (state) {
+		/*productById (state) {
 			return productId => {
 				return state.products.find(product => product.id === productId)
 			}
-		},
+		},*/
 		/*productByCategory (state) {
 			return productCategory => {
-				return state.products.find(product => product.category === productCategory)
+				return state.products.find(category => category === productCategory)
 			}
 		}*/
+		product: (state, getters) => (category) => {
+			return getters.products[category];
+		}
 	},
 	mutations: {
 		/*createProduct(state, payload){

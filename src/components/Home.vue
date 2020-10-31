@@ -195,7 +195,6 @@
 						<ul class="c-product-grid__list c-product-grid__list--layout-product-3 c-product-grid__list--carousel columns-4 h-clearfix">
 
 							<app-product-item
-								v-model="cl"
 								v-for="(product,i) in products.pizza" :key="i"
 								:product="product"
 							></app-product-item>
@@ -239,9 +238,6 @@ export default {
 	computed: {
 		products() {
 			return this.$store.getters.products
-		},
-		cl(){
-			console.log(this.$store.getters.products)
 		}
 	}
 }

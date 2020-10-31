@@ -1,5 +1,6 @@
 <template>
 	<section class="c-product product type-product post-145 status-publish first instock product_cat-pizza has-post-thumbnail shipping-taxable purchasable product-type-variable has-default-attributes">
+		
 		<div class="c-product__wrap c-product__wrap--sidebar">
 			<div class="c-product__image c-product__image--sidebar">
 				<div class="c-badge__list c-product__badges"></div>
@@ -246,12 +247,7 @@ export default {
 
 		}
 	},
-	computed: {
-		product() {
-			const id = this.id
-			return this.$store.getters.productById(id)
-		},
-	}
+	computed: {}
 }
 </script>
 
