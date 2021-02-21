@@ -175,27 +175,30 @@
 		<div id="home-tabs" class="l-section c-home-tabs c-home-tabs--top-margin c-home-tabs--carousel h-carousel js-product-carousel init">
 			<div class="l-section__container c-home-tabs__header">
 				<ul class="c-home-tabs__header-list">
-					<li class="c-home-tabs__header-item c-home-tabs__header-item--active h-wave">
-						<a class="c-home-tabs__header-link js-tab-title" href="#tab-25"> Pizza </a>
-					</li>
-					<li class="c-home-tabs__header-item">
-						<a class="c-home-tabs__header-link js-tab-title" href="#tab-19"> Burgers </a>
-					</li>
-					<li class="c-home-tabs__header-item">
-						<a class="c-home-tabs__header-link js-tab-title" href="#tab-29"> Sushi </a>
-					</li>
-					<li class="c-home-tabs__header-item">
-						<a class="c-home-tabs__header-link js-tab-title" href="#tab-21"> Drinks </a>
+					<li
+            v-for="(categoryItem, index) in category" :key="index"
+            class="c-home-tabs__header-item"
+            :class="{'c-home-tabs__header-item--active h-wave': tabShow === index}"
+          >
+						<a
+              class="c-home-tabs__header-link"
+              @click.prevent="tabShow = index"
+              @click="selectedCategory = categoryItem.name"
+            >{{ categoryItem.name }}</a>
 					</li>
 				</ul>
 			</div>
 			<div class="c-home-tabs__wrap l-section__container">
-				<div class="c-home-tabs__tab c-home-tabs__tab--active c-home-tabs__tab--visible js-view-more-tab">
+				<div
+          v-if="tabShow === index"
+          v-for="(item, index) in category" :key="index"
+          class="c-home-tabs__tab c-home-tabs__tab--active c-home-tabs__tab--visible js-view-more-tab"
+        >
 					<div class="woocommerce columns-4">
 						<ul class="c-product-grid__list c-product-grid__list--layout-product-3 c-product-grid__list--carousel columns-4 h-clearfix">
 
 							<app-product-item
-								v-for="(product,i) in products.pizza" :key="i"
+								v-for="(product, index) in products" :key="index"
 								:product="product"
 							></app-product-item>
 
@@ -232,14 +235,18 @@
 export default {
 	data() {
 		return {
-			
+			tabShow: 0,
+      selectedCategory: 'pizza',
 		}
 	},
 	computed: {
-		products() {
-			return this.$store.getters.products
-		}
-	}
+    category() {
+      return this.$store.getters.categories;
+    },
+    products() {
+			return this.$store.getters.product(this.selectedCategory);
+		},
+	},
 }
 </script>
 
@@ -298,4 +305,7 @@ export default {
 		visibility: inherit;
 		z-index: 20;
 	}
+  .c-home-tabs__header-link{
+    text-transform: capitalize;
+  }
 </style>

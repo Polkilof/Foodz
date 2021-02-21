@@ -58,6 +58,8 @@
 									class="c-form__button woocommerce-Button button"
 									name="login"
 									value="Log in"
+                  :loading="loading"
+                  :disabled="loading"
 									@click="onSubmitLogin"
 								>Log in</button>
 							</p>
@@ -100,6 +102,8 @@
 									class="c-form__button woocommerce-Button button"
 									name="register"
 									value="Register"
+                  :loading="loading"
+                  :disabled="loading"
 									@click="onSubmitRegister"
 								>Register</button>
 							</p>
@@ -120,6 +124,11 @@ export default {
 			password: '',
 		}
 	},
+  computed: {
+    loading(){
+      return this.$store.getters.loading;
+    }
+  },
 	methods: {
 		onSubmitLogin(){
 			const user = {
@@ -136,7 +145,7 @@ export default {
 			const user = {
 				email: this.email,
 				password: this.password,
-			}
+			};
 			this.$store.dispatch('registerUser', user)
 			.then(() => {
 				this.$router.push('/')

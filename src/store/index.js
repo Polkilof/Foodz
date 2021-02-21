@@ -5,7 +5,7 @@ import user from './modules/user.js'
 import products from './modules/products.js'
 import orders from './modules/orders.js'
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
 export default new Vuex.Store({
 	modules: {

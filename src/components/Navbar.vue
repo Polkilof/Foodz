@@ -157,7 +157,7 @@
 						stroke="none"
 					></path>
 				</symbol>
-				<symbol viewBox="0 0 137 137" id="svg-icon-10" fill="inherit" stroke="inherit">
+				<symbol viewBox="0 0 137 137" id="svg-icon-noodles" fill="inherit" stroke="inherit">
 					<path
 						fill-rule="evenodd"
 						clip-rule="evenodd"
@@ -173,7 +173,7 @@
 						stroke="none"
 					></path>
 				</symbol>
-				<symbol viewBox="0 0 137 137" id="svg-icon-12" fill="inherit" stroke="inherit">
+				<symbol viewBox="0 0 137 137" id="svg-icon-sushi" fill="inherit" stroke="inherit">
 					<path
 						fill-rule="evenodd"
 						clip-rule="evenodd"
@@ -191,7 +191,7 @@
 						stroke="none"
 					></path>
 				</symbol>
-				<symbol viewBox="0 0 137 137" id="svg-icon-14" fill="inherit" stroke="inherit">
+				<symbol viewBox="0 0 137 137" id="svg-icon-steaks" fill="inherit" stroke="inherit">
 					<path
 						fill-rule="evenodd"
 						clip-rule="evenodd"
@@ -216,7 +216,7 @@
 						stroke="none"
 					></path>
 				</symbol>
-				<symbol viewBox="0 0 137 137" id="svg-icon-17" fill="inherit" stroke="inherit">
+				<symbol viewBox="0 0 137 137" id="svg-icon-drinks" fill="inherit" stroke="inherit">
 					<path
 						fill-rule="evenodd"
 						clip-rule="evenodd"
@@ -243,7 +243,7 @@
 						stroke="none"
 					></path>
 				</symbol>
-				<symbol viewBox="0 0 137 137" id="svg-icon-2" fill="inherit" stroke="inherit">
+				<symbol viewBox="0 0 137 137" id="svg-icon-pizza" fill="inherit" stroke="inherit">
 					<path
 						fill-rule="evenodd"
 						clip-rule="evenodd"
@@ -361,7 +361,7 @@
 						stroke="none"
 					></path>
 				</symbol>
-				<symbol viewBox="0 0 137 137" id="svg-icon-32" fill="inherit" stroke="inherit">
+				<symbol viewBox="0 0 137 137" id="svg-icon-desserts" fill="inherit" stroke="inherit">
 					<path
 						d="M123 75.7866C123 68.2289 117.464 61.9387 110.221 60.7208C111.672 58.3872 112.512 55.6388 112.512 52.6977C112.512 44.2706 105.631 37.4148 97.1721 37.4148H78.8708C80.2897 35.2213 81.1174 32.6151 81.1174 29.8171C81.1174 23.6097 77.058 18.332 71.4468 16.4716C71.8025 15.609 72.3381 14.687 73.1491 13.8936C74.8573 12.22 77.5007 11.411 80.9904 11.4821L81.1477 4.00611C75.5531 3.89026 71.0931 5.42167 67.8878 8.56139C65.3636 11.0342 64.2115 13.9423 63.6867 16.1483C57.4961 17.6379 52.8826 23.1989 52.8826 29.8171C52.8826 32.6151 53.7103 35.2223 55.1292 37.4148H36.8279C28.3691 37.4148 21.4875 44.2706 21.4875 52.6977C21.4875 55.6388 22.3279 58.3872 23.7791 60.7208C16.5359 61.9397 11 68.2289 11 75.7866C11 81.9307 14.6597 87.2357 19.9191 89.6608L32.4685 131.607H101.531L114.081 89.6608C119.34 87.2357 123 81.9298 123 75.7866V75.7866ZM66.9995 23.23C70.6455 23.23 73.6124 26.1848 73.6124 29.8171C73.6124 33.4495 70.6455 36.4042 66.9995 36.4042C63.3535 36.4042 60.3877 33.4495 60.3877 29.8171C60.3877 26.1848 63.3535 23.23 66.9995 23.23ZM36.8279 44.8917H97.1721C101.492 44.8917 105.007 48.3936 105.007 52.6977C105.007 57.0018 101.492 60.5037 97.1721 60.5037H36.8279C32.5066 60.5037 28.9925 57.0018 28.9925 52.6977C28.9925 48.3936 32.5066 44.8917 36.8279 44.8917ZM26.3394 67.9806H107.66C111.981 67.9806 115.495 71.4825 115.495 75.7866C115.495 80.0907 111.98 83.5926 107.66 83.5926H26.3394C22.0191 83.5926 18.5041 80.0907 18.5041 75.7866C18.5041 71.4825 22.0191 67.9806 26.3394 67.9806ZM70.752 91.0695H84.564L79.6213 124.13H70.752V91.0695ZM63.247 124.13H54.3778L49.436 91.0695H63.247V124.13ZM28.1717 91.0695H41.8479L46.7906 124.13H38.0621L28.1717 91.0695ZM95.9369 124.13H87.2094L92.1512 91.0695H105.828L95.9369 124.13Z"
 						fill="inherit"
@@ -559,7 +559,7 @@
 						stroke="none"
 					></path>
 				</symbol>
-				<symbol viewBox="0 0 137 137" id="svg-icon-9" fill="inherit" stroke="inherit">
+				<symbol viewBox="0 0 137 137" id="svg-icon-burgers" fill="inherit" stroke="inherit">
 					<path
 						fill-rule="evenodd"
 						clip-rule="evenodd"
@@ -925,42 +925,42 @@
 									<li class="c-mega-menu__item menu-item-490">
 										<a href="#">
 											<span class="c-mega-menu__title-wrap c-mega-menu__title-wrap--vert c-mega-menu__title-wrap--header-type-1">
-												<svg class="c-mega-menu__icon"><use xlink:href="#svg-icon-9"></use></svg><span class="c-mega-menu__title c-mega-menu__title--vert">Burgers</span>
+												<svg class="c-mega-menu__icon"><use xlink:href="#svg-icon-burgers"></use></svg><span class="c-mega-menu__title c-mega-menu__title--vert">Burgers</span>
 											</span>
 										</a>
 									</li>
 									<li class="c-mega-menu__item menu-item-494">
 										<a href="#">
 											<span class="c-mega-menu__title-wrap c-mega-menu__title-wrap--vert c-mega-menu__title-wrap--header-type-1">
-												<svg class="c-mega-menu__icon"><use xlink:href="#svg-icon-12"></use></svg><span class="c-mega-menu__title c-mega-menu__title--vert">Sushi</span>
+												<svg class="c-mega-menu__icon"><use xlink:href="#svg-icon-sushi"></use></svg><span class="c-mega-menu__title c-mega-menu__title--vert">Sushi</span>
 											</span>
 										</a>
 									</li>
 									<li class="c-mega-menu__item menu-item-492">
 										<a href="#">
 											<span class="c-mega-menu__title-wrap c-mega-menu__title-wrap--vert c-mega-menu__title-wrap--header-type-1">
-												<svg class="c-mega-menu__icon"><use xlink:href="#svg-icon-10"></use></svg><span class="c-mega-menu__title c-mega-menu__title--vert">Noodles</span>
+												<svg class="c-mega-menu__icon"><use xlink:href="#svg-icon-noodles"></use></svg><span class="c-mega-menu__title c-mega-menu__title--vert">Noodles</span>
 											</span>
 										</a>
 									</li>
 									<li class="c-mega-menu__item menu-item-493">
 										<a href="#">
 											<span class="c-mega-menu__title-wrap c-mega-menu__title-wrap--vert c-mega-menu__title-wrap--header-type-1">
-												<svg class="c-mega-menu__icon"><use xlink:href="#svg-icon-14"></use></svg><span class="c-mega-menu__title c-mega-menu__title--vert">Steaks</span>
+												<svg class="c-mega-menu__icon"><use xlink:href="#svg-icon-steaks"></use></svg><span class="c-mega-menu__title c-mega-menu__title--vert">Steaks</span>
 											</span>
 										</a>
 									</li>
 									<li class="c-mega-menu__item menu-item-491">
 										<a href="#">
 											<span class="c-mega-menu__title-wrap c-mega-menu__title-wrap--vert c-mega-menu__title-wrap--header-type-1">
-												<svg class="c-mega-menu__icon"><use xlink:href="#svg-icon-32"></use></svg><span class="c-mega-menu__title c-mega-menu__title--vert">Desserts</span>
+												<svg class="c-mega-menu__icon"><use xlink:href="#svg-icon-desserts"></use></svg><span class="c-mega-menu__title c-mega-menu__title--vert">Desserts</span>
 											</span>
 										</a>
 									</li>
 									<li class="c-mega-menu__item menu-item-563">
 										<a href="#">
 											<span class="c-mega-menu__title-wrap c-mega-menu__title-wrap--vert c-mega-menu__title-wrap--header-type-1">
-												<svg class="c-mega-menu__icon"><use xlink:href="#svg-icon-17"></use></svg><span class="c-mega-menu__title c-mega-menu__title--vert">Drinks</span>
+												<svg class="c-mega-menu__icon"><use xlink:href="#svg-icon-drinks"></use></svg><span class="c-mega-menu__title c-mega-menu__title--vert">Drinks</span>
 											</span>
 										</a>
 									</li>
@@ -1009,7 +1009,19 @@
 							<!-- <button class="h-cb h-cb--svg c-header__search-button js-search-button" type="button">
 								<svg class="c-header__search-button-svg"><use xlink:href="#svg-search"></use></svg>
 							</button> -->
-							<div class="c-header__auth">
+              <div
+                v-show="isUserLoggedIn"
+                class="c-header__auth"
+                @click="onLogout"
+              >
+                <span class="c-header__button-link c-header__button-link--accounts">
+                  Logout
+                </span>
+              </div>
+							<div
+                v-show="!isUserLoggedIn"
+                class="c-header__auth"
+              >
 								<router-link to="/my-account" tag="a" class="c-header__button-link c-header__button-link--accounts">
 									<svg class="c-header__auth-svg"><use xlink:href="#svg-user"></use></svg>
 								</router-link>
@@ -1072,53 +1084,11 @@
 									class="c-mega-menu__item c-mega-menu__item--has-children menu-item-495">
 									<router-link :to="'/product-category/' + item.name" tag="a">
 										<span class="c-mega-menu__title-wrap c-mega-menu__title-wrap--vert c-mega-menu__title-wrap--header-type-1">
-											<svg class="c-mega-menu__icon"><use xlink:href="#svg-icon-2"></use></svg>
+											<svg class="c-mega-menu__icon"><use :xlink:href="'#svg-icon-' + item.name"></use></svg>
 											<span class="c-mega-menu__title c-mega-menu__title--vert">{{item.name}}</span>
 										</span>
 									</router-link>
 								</li>
-								<!-- <li class="c-mega-menu__item menu-item-490">
-									<router-link :to="'/product-category/' + category[1]" tag="a">
-										<span class="c-mega-menu__title-wrap c-mega-menu__title-wrap--vert c-mega-menu__title-wrap--header-type-1">
-											<svg class="c-mega-menu__icon"><use xlink:href="#svg-icon-9"></use></svg><span class="c-mega-menu__title c-mega-menu__title--vert">Burgers</span>
-										</span>
-									</router-link>
-								</li>
-								<li class="c-mega-menu__item menu-item-494">
-									<router-link :to="'/product-category/' + category[2]" tag="a">
-										<span class="c-mega-menu__title-wrap c-mega-menu__title-wrap--vert c-mega-menu__title-wrap--header-type-1">
-											<svg class="c-mega-menu__icon"><use xlink:href="#svg-icon-12"></use></svg><span class="c-mega-menu__title c-mega-menu__title--vert">Sushi</span>
-										</span>
-									</router-link>
-								</li>
-								<li class="c-mega-menu__item menu-item-492">
-									<router-link :to="'/product-category/' + category[3]" tag="a">
-										<span class="c-mega-menu__title-wrap c-mega-menu__title-wrap--vert c-mega-menu__title-wrap--header-type-1">
-											<svg class="c-mega-menu__icon"><use xlink:href="#svg-icon-10"></use></svg><span class="c-mega-menu__title c-mega-menu__title--vert">Noodles</span>
-										</span>
-									</router-link>
-								</li>
-								<li class="c-mega-menu__item menu-item-493">
-									<router-link :to="'/product-category/' + category[4]" tag="a">
-										<span class="c-mega-menu__title-wrap c-mega-menu__title-wrap--vert c-mega-menu__title-wrap--header-type-1">
-											<svg class="c-mega-menu__icon"><use xlink:href="#svg-icon-14"></use></svg><span class="c-mega-menu__title c-mega-menu__title--vert">Steaks</span>
-										</span>
-									</router-link>
-								</li>
-								<li class="c-mega-menu__item menu-item-491">
-									<router-link :to="'/product-category/' + category[5]" tag="a">
-										<span class="c-mega-menu__title-wrap c-mega-menu__title-wrap--vert c-mega-menu__title-wrap--header-type-1">
-											<svg class="c-mega-menu__icon"><use xlink:href="#svg-icon-32"></use></svg><span class="c-mega-menu__title c-mega-menu__title--vert">Desserts</span>
-										</span>
-									</router-link>
-								</li>
-								<li class="c-mega-menu__item menu-item-563">
-									<router-link :to="'/product-category/' + category[6]" tag="a">
-										<span class="c-mega-menu__title-wrap c-mega-menu__title-wrap--vert c-mega-menu__title-wrap--header-type-1">
-											<svg class="c-mega-menu__icon"><use xlink:href="#svg-icon-17"></use></svg><span class="c-mega-menu__title c-mega-menu__title--vert">Drinks</span>
-										</span>
-									</router-link>
-								</li> -->
 							</ul>
 						</nav>
 					</div>
@@ -1216,9 +1186,18 @@
 			}
 		},
 		computed: {
+      isUserLoggedIn() {
+        return this.$store.getters.isUserLoggedIn;
+      },
 			category() {
-				return this.$store.getters.categories
+				return this.$store.getters.categories;
 			},
-		}
+		},
+    methods: {
+		  onLogout() {
+        this.$store.dispatch('logoutUser');
+        this.$router.push('/');
+      }
+    }
 	}
 </script>

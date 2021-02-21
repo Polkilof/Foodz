@@ -10,7 +10,6 @@ Vue.component('app-product-item', ProductItemComponent)
 Vue.config.productionTip = false
 
 new Vue({
-	el: '#app',
 	router: Routes,
 	store,
 	render: h => h(App),
@@ -28,6 +27,13 @@ new Vue({
 			measurementId: "G-XEHJ6P6LSE"
 		};
 		// Initialize Firebase
-		fb.initializeApp(firebaseConfig);
+    fb.initializeApp(firebaseConfig);
+    fb.analytics();
+    fb.auth().onAuthStateChanged(user => {
+      if (user) {
+        this.$store.dispatch('autoLoginUser', user);
+      }
+    });
+    this.$store.dispatch('fetchProducts');
 	}
-})
+}).$mount('#app');

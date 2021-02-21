@@ -30,30 +30,27 @@ const routes = [
 		path: '/product-category/:categories',
 		name: 'product-category',
 		component: ProductCategory,
-		//beforeEnter: AuthGuard
 	},
 	{
 		path: '/checkout',
 		name: 'checkout',
 		component: Checkout,
-		//beforeEnter: AuthGuard
 	},
 	{
 		path: '/cart',
 		name: 'cart',
 		component: Cart,
-		//beforeEnter: AuthGuard
 	},
 	{
 		path: '/wishlist',
 		name: 'wishlist',
 		component: Wishlist,
-		//beforeEnter: AuthGuard
 	},
 	{
 		path: '/my-account',
 		name: 'my-account',
-		component: MyAccount
+		component: MyAccount,
+    beforeEnter: AuthGuard
 	},
 ]
 

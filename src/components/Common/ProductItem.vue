@@ -30,7 +30,10 @@
 					<router-link :to="'/product/' + product.id" tag="a" class="c-product-grid__title-link">{{ product.name }}</router-link>
 				</div>
 
-				<div class="c-markers c-product-grid__markers">
+				<div
+          v-if="product.category === 'pizza'"
+          class="c-markers c-product-grid__markers"
+        >
 					<span class="c-markers__wrap c-product-grid__marker js-marker">
 						<span class="c-markers__title">Vegetarian</span>
 						<img class="c-markers__icon" src="../../assets/demo1-1944807851-1.svg" alt="Vegetarian" />
@@ -39,6 +42,7 @@
 						<span class="c-markers__title">Spicy</span>
 						<img class="c-markers__icon" src="../../assets/demo1-1927616421-1.svg" alt="Spicy" />
 					</span>
+
 					<span class="c-markers__wrap c-product-grid__marker c-product-grid__marker_has">
 						<button class="h-cb h-cb--svg c-product-grid__marker-info-icon js-extra-info" type="button">
 							<svg><use xlink:href="#svg-info"></use></svg>
@@ -56,59 +60,72 @@
 				</div>
 
 				<form class="c-variation__form variations_form cart" action="#">
-					<div class="c-variation__wrap variations">
-						<div class="c-variation__label">
-							<label for="pa_crust">Crust</label>
-						</div>
-						<div class="c-variation__select">
-							<select class="hasCustomSelect" name="attribute_pa_crust" style="height: 32px; font-size: 13px;">
-								<option value="" selected="selected">Choose an option</option>
-								<option value="thick" class="attached enabled">thick</option>
-								<option value="thin" class="attached enabled">thin</option>
-							</select>
-							
-						</div>
-					</div>
-					<div class="c-variation__wrap variations">
-						<div class="c-variation__label">
-							<label for="pa_size">Size</label>
-						</div>
-						<div class="c-variation__select c-variation__select--last">
-							<select class="hasCustomSelect" name="attribute_pa_size" style="height: 32px; font-size: 13px;">
-								<option value="" selected="selected">Choose an option</option>
-								<option value="25cm" class="attached enabled">25cm</option>
-								<option value="30cm" class="attached enabled">30cm</option>
-								<option value="35cm" class="attached enabled">35cm</option>
-							</select>
-						</div>
-						<button class="reset_variations h-cb c-variation__reset" type="button">
-							<svg class="c-variation__reset-svg"><use xlink:href="#svg-clear"></use></svg>Clear
-						</button>
+
+          <div v-if="product.category === 'pizza'">
+            <div class="c-variation__wrap variations">
+              <div class="c-variation__label">
+                <label for="pa_crust">Crust</label>
+              </div>
+              <div class="c-variation__select">
+                <select class="hasCustomSelect" name="attribute_pa_crust" style="height: 32px; font-size: 13px;">
+                  <option value="" selected="selected">Choose an option</option>
+                  <option value="thick" class="attached enabled">thick</option>
+                  <option value="thin" class="attached enabled">thin</option>
+                </select>
+
+              </div>
+            </div>
+            <div class="c-variation__wrap variations">
+              <div class="c-variation__label">
+                <label for="pa_size">Size</label>
+              </div>
+              <div class="c-variation__select c-variation__select--last">
+                <select class="hasCustomSelect" name="attribute_pa_size" style="height: 32px; font-size: 13px;">
+                  <option value="" selected="selected">Choose an option</option>
+                  <option value="25cm" class="attached enabled">25cm</option>
+                  <option value="30cm" class="attached enabled">30cm</option>
+                  <option value="35cm" class="attached enabled">35cm</option>
+                </select>
+              </div>
+              <button class="reset_variations h-cb c-variation__reset" type="button">
+                <svg class="c-variation__reset-svg"><use xlink:href="#svg-clear"></use></svg>Clear
+              </button>
+            </div>
 					</div>
 
+
 					<div class="c-variation__single single_variation_wrap">
-						<div class="c-variation__single-info single_variation" style="display: none !important;">
-							<div class="woocommerce-variation-description"></div>
-							<div class="woocommerce-variation-price">
+            <div>
+              <div
+                v-if="product.category !== 'pizza'"
+                class="c-variation__single-info single_variation"
+              >
+                <div class="woocommerce-variation-description"></div>
+                <div class="woocommerce-variation-price">
 								<span class="price">
 									<span class="woocommerce-Price-amount amount">
-										<bdi><span class="woocommerce-Price-currencySymbol">$</span>13.99</bdi>
+										<bdi><span class="woocommerce-Price-currencySymbol">$</span>{{ product.price }}</bdi>
 									</span>
 								</span>
-							</div>
-							<div class="woocommerce-variation-availability"></div>
-						</div>
-						<div class="c-variation__single-price" style="display: block !important;">
+                </div>
+                <div class="woocommerce-variation-availability"></div>
+              </div>
+              <div
+                v-else-if="product.category === 'pizza'"
+                class="c-variation__single-price"
+              >
 							<span class="price">
 								<span class="woocommerce-Price-amount amount">
-									<bdi><span class="woocommerce-Price-currencySymbol">$</span>13.99</bdi>
+									<bdi><span class="woocommerce-Price-currencySymbol">$</span>{{ product.price[0] }}</bdi>
 								</span>
 								–
 								<span class="woocommerce-Price-amount amount">
-									<bdi><span class="woocommerce-Price-currencySymbol">$</span>15.99</bdi>
+									<bdi><span class="woocommerce-Price-currencySymbol">$</span>{{ product.price[1] }}</bdi>
 								</span>
 							</span>
-						</div>
+              </div>
+            </div>
+
 						<div class="woocommerce-variation-add-to-cart variations_button woocommerce-variation-add-to-cart-enabled">
 							<a
 								href="#"
@@ -138,7 +155,7 @@ export default {
 	props: ['product'],
 	data(){
 		return{
-			
+
 		}
 	},
 	computed: {
